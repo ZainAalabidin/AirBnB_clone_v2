@@ -6,13 +6,14 @@ from models.base_model import BaseModel, Base
 from sqlalchemy.orm import relationship
 from sqlalchemy import Column, String, ForeignKey
 
-
 class State(BaseModel, Base):
     """ State class """
-    if models.storage_type = "db":
-        __tablename__ = 'state'
+    __tablename__ = 'states'
+
+    if models.HBNB_TYPE_STORAGE == "db":
         name = Column(String(128), nullable=False)
-        cities = relationship("City", backref="state")
+        cities = relationship('City', backref="state", 
+                              cascade="all, delete, delete-orphan")
     else:
         name = ""
 
@@ -20,7 +21,7 @@ class State(BaseModel, Base):
         """ initializing state model"""
         super().__init__(*args, **kwargs)
 
-    if models.storage_type != "db":
+    if models.HBNB_TYPE_STORAGE != "db":
         @property
         def cities(self):
             """
@@ -28,8 +29,7 @@ class State(BaseModel, Base):
             linked to the current State
             """
             CityList = []
-            cities = models.storage.all(City)
-            for city  in cities.values():
+            for city in models.storage.all(City).values():
                 if city.state_id == self.id:
                     CityList.append(city)
             return CityList

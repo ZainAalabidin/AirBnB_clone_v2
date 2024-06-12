@@ -1,22 +1,22 @@
 {
-  "State.44b2c17f-e1f6-4093-a6e1-1b0a58cd5bdc": {
-    "id": "44b2c17f-e1f6-4093-a6e1-1b0a58cd5bdc",
-    "created_at": "2024-05-15T03:41:52.441923",
-    "updated_at": "2024-05-15T03:46:41.809497",
-    "name": "Zain_Alabidin",
+  "State.c5a04670-cf95-40ff-9e80-26225d05c17e": {
+    "id": "c5a04670-cf95-40ff-9e80-26225d05c17e",
+    "created_at": "2024-06-03T00:17:11.910561",
+    "updated_at": "2024-06-03T03:17:11.911232",
+    "name": "California",
     "__class__": "State"
   },
-  "State.533c87d4-c88b-46d8-9f22-75b3c09e800c": {
-    "id": "533c87d4-c88b-46d8-9f22-75b3c09e800c",
-    "created_at": "2024-05-15T03:41:52.443871",
-    "updated_at": "2024-05-15T03:41:52.443917",
+  "State.b97e0204-727e-4120-ac76-ab8b1b0754c7": {
+    "id": "b97e0204-727e-4120-ac76-ab8b1b0754c7",
+    "created_at": "2024-06-03T00:17:11.912421",
+    "updated_at": "2024-06-03T03:17:11.912432",
     "name": "Arizona",
     "__class__": "State"
   },
-  "Place.e063f4ed-a17f-4f39-9e64-152220696ba6": {
-    "id": "e063f4ed-a17f-4f39-9e64-152220696ba6",
-    "created_at": "2024-05-15T03:41:52.447612",
-    "updated_at": "2024-05-15T03:41:52.447660",
+  "Place.c9e15904-cce9-4d70-b722-54fd3565ec44": {
+    "id": "c9e15904-cce9-4d70-b722-54fd3565ec44",
+    "created_at": "2024-06-03T00:17:11.914892",
+    "updated_at": "2024-06-03T03:17:11.914905",
     "city_id": "0001",
     "user_id": "0001",
     "name": "My little house",
@@ -27,5 +27,19 @@
     "latitude": 37.773972,
     "longitude": -122.431297,
     "__class__": "Place"
+  },
+  "State.4517ac00-0670-466d-a734-009b9a4d23c6": {
+    "id": "4517ac00-0670-466d-a734-009b9a4d23c6",
+    "created_at": "2024-06-03T00:19:20.345482",
+    "updated_at": "2024-06-03T00:19:20.345484",
+    "name": "California",
+    "__class__": "State"
+  },
+  "State.a702f18d-aa65-4c2c-8dd4-67fea2d901cb": {
+    "id": "a702f18d-aa65-4c2c-8dd4-67fea2d901cb",
+    "created_at": "2024-06-03T00:19:20.346116",
+    "updated_at": "2024-06-03T00:19:20.346117",
+    "name": "Nevada",
+    "__class__": "State"
   }
 }
