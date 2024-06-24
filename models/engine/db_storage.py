@@ -24,6 +24,7 @@ classes = {
     "User": User,
 }
 
+
 class DBStorage:
     """Interacts with the MySQL database"""
 
@@ -38,8 +39,7 @@ class DBStorage:
         db = os.getenv("HBNB_MYSQL_DB")
         env = os.getenv("HBNB_ENV")
         self.__engine = create_engine(
-            f'mysql+mysqldb://{user}:{pwd}@{host}/{db}',
-            pool_pre_ping=True
+            f"mysql+mysqldb://{user}:{pwd}@{host}/{db}", pool_pre_ping=True
         )
         if env == "test":
             Base.metadata.drop_all(self.__engine)
@@ -48,8 +48,10 @@ class DBStorage:
     def all(self, cls=None):
         """Query on the current database session"""
         if cls:
-            return {obj.__class__.__name__ + "." + obj.id: obj
-                    for obj in self.__session.query(cls).all()}
+            return {
+                obj.__class__.__name__ + "." + obj.id: obj
+                for obj in self.__session.query(cls).all()
+            }
         else:
             obj_dict = {}
             for class_name, class_type in classes.items():
