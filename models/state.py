@@ -20,20 +20,17 @@ class State(BaseModel, Base):
     else:
         name = ""
 
+        @property
+        def cities(self):
+            from models import storage
+
+            all_cities = storage.all("City").values()
+            return [
+                city
+                for city in all_cities
+                if getattr(city, "state_id", None) == self.id
+            ]
+
     def __init__(self, *args, **kwargs):
         """initializing state model"""
         super().__init__(*args, **kwargs)
-
-    if models.HBNB_TYPE_STORAGE != "db":
-
-        @property
-        def cities(self):
-            """
-            return the list of City objects from storage
-            linked to the current State
-            """
-            CityList = []
-            for city in models.storage.all(City).values():
-                if city.state_id == self.id:
-                    CityList.append(city)
-            return CityList
